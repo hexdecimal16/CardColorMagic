@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Card Color Magic</string>
+    <string name="changeButton">Change Button</string>
+    <string name="state">State</string>
+</resources>
