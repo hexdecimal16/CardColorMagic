@@ -11,7 +11,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.dhairytripathi.cardcolormagic.R
 import com.dhairytripathi.cardcolormagic.model.State
 
-class CardColorAdapter(private val cardTitles: Array<String>, private var state: State, private val context: Context): RecyclerView.Adapter<CardColorAdapter.CardColorViewHolder>() {
+class CardColorAdapter(private val cardTitles: Array<String>,
+                       private var state: State,
+                       private val context: Context)
+    : RecyclerView.Adapter<CardColorAdapter.CardColorViewHolder>() {
 
 
     class CardColorViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -24,7 +27,8 @@ class CardColorAdapter(private val cardTitles: Array<String>, private var state:
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardColorViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_card, parent, false)
+        val view = LayoutInflater.from(parent.context)
+                    .inflate(R.layout.item_card, parent, false)
         return CardColorViewHolder(view)
     }
 

@@ -1,15 +1,11 @@
 package com.dhairytripathi.cardcolormagic.ui
 
-import android.app.Activity
 import android.app.Application
 import android.content.Context
 import android.content.SharedPreferences
-import android.util.Log
-import androidx.core.content.ContextCompat
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import com.dhairytripathi.cardcolormagic.R
+import com.dhairytripathi.cardcolormagic.adapter.CardColorAdapter
 import com.dhairytripathi.cardcolormagic.model.State
 
 class MainViewModel(application: Application) : AndroidViewModel(application) {
@@ -71,6 +67,5 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         val editor = sharedPref.edit()
         editor.putString("State", currentState.value.toString())
         editor.apply()
-
     }
 }
